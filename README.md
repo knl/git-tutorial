@@ -4,6 +4,11 @@ Tutorial on git and GitHub for beginners, with content being changed on the need
 basis.
    
 ## Step 1: Cloning from a remote server to your local machine 
+
+To clone this repository, do the following in your shell:
+
+    git clone https://github.com/knl/git-tutorial
+
 ## Step 2: Checking out the history
 ## Step 3: Adding a new file
 ## Step 4: Creating a new commit
