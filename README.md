@@ -10,7 +10,7 @@ known as *cloning*.
 
 To clone a repo, first you need to copy the repo's URL as seen below:
 
-<img src="https://www.dropbox.com/s/mp400l5ryovfcqf/cloning.png?dl=0">
+<img src="https://www.dropbox.com/s/oit0qdyvsnvf45a/cloning.png?dl=0">
 
 Move to where you want to place the project on your local machine using the
 ``cd`` (change directory) command. For instance if you have a =projects= folder
