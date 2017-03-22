@@ -97,6 +97,62 @@ This history is unwidely. Try out the following arguments to `git log`:
 
 Try out combinations, too.
 
+### Commit limiting
+
+We can also narrow down what we see in the history, as we (definitely) are not
+interested in the full history since the inception of the project. The syntax
+for commit narrowing is:
+
+    $ git log [<options>] [<revision-range>] [[--] <path>...]
+
+`<revision range>` part tells git for which commits we are interested in
+could be a range:
+
+- for example `a315d42..b1d3ec1`, or `b1d3ec1..master`
+- or a date: `--since=<date>`, `--after=<date>`, `--until=<date>`, `--before=<date>`
+  - tip: "2 weeks ago" is a valid date
+- or the author: `--author=<who>`, `--committer=<who>`
+- or the text: `--grep=<what>`
+
+Exercise: find all commits containing word "Hello"
+Exercise: find all commits containing word "Hello" in the last 2 weeks (or two
+months)
+Exercise: find all commits done by Donald Duck
+
+### History simplification
+
+If we're interested in getting all commits that acted on a particular file, we
+use the following form:
+
+    $ git log [options] [revision range] [[--] path...]
+
+Notice `-- path` path. This tells git to only do `git log`, plus all commit
+narrowing and other parameters, but only while looking at commits that affected
+`path`.
+
+Here are all commits touching `README.md`, up to this point:
+
+    $ git log --oneline --abbrev-commit -- README.md
+    1765591 Add step 2, description of git log command
+    eb2de5b Fix dropbox image
+    a315d42 Add more clarifications to the first step
+    4804a47 Add the first step - Hello World of git
+    f7e3c79 Add the initial README.md
+
+Exercise: Try out different combinations of arguments to `git log`. Try out
+multiple paths.
+
+### Looking at a single commit
+
+`git log` is nice, but it only shows us the history. Sometimes we want to see
+changes made by a particular commit. If that's the case, there is a command for
+it:
+
+    $ git show -p <object>...
+
+`<object>` is SHA-1 of the commit, either short or full.
+
+Exercise: see the changes introduced by one of commits containing word "Hello".
 
 ## Step 3: Adding a new file
 ## Step 4: Creating a new commit
