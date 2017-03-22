@@ -5,4 +5,5 @@ salt
 suggar
 vegetable oil
 nutella
-cinammon
+bananas
+raspberry jam
