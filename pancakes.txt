@@ -4,5 +4,6 @@ flour
 salt
 suggar
 vegetable oil
-nutella
-cinammon
+chedar
+gryere
+mozarella
